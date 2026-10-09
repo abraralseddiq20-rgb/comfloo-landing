@@ -1,0 +1,476 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #fdfbf7;
+    color: #333;
+    direction: rtl;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* الهيدر */
+header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+}
+
+/* الأزرار */
+.btn {
+    background-color: #6b1d2f;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: 0.3s;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+}
+
+.btn:hover {
+    background-color: #4a1320;
+    color: #fff;
+}
+
+.btn-large {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+/* القسم الرئيسي */
+.hero {
+    padding: 80px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: #6b1d2f;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* قسم المنتجات */
+.products {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #6b1d2f;
+    margin-bottom: 50px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #fdfbf7;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    color: #6b1d2f;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #e74c3c;
+    margin-bottom: 15px;
+    background-color: #fdf2f2;
+    display: inline-block;
+    padding: 4px 15px;
+    border-radius: 20px;
+    align-self: center;
+}
+
+.product-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.product-card .btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+/* ألوان المنتج */
+.product-colors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    color: #6b1d2f;
+    font-weight: 600;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+}
+
+.product-colors img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #eee;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 0;
+}
+
+.product-colors img:hover {
+    border-color: #6b1d2f;
+    transform: scale(1.15);
+}
+
+.selected-color {
+    font-size: 0.9rem;
+    color: #6b1d2f;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* المميزات */
+.features {
+    padding: 60px 0;
+    background-color: #fdfbf7;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-item {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.feature-item i {
+    font-size: 2.5rem;
+    color: #6b1d2f;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.feature-item p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* التقييمات */
+.reviews {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.review-img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+}
+
+/* قسم الطلب الذكي (الفورم) */
+.order-section {
+    padding: 80px 0;
+    background-color: #fdfbf7;
+}
+
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.add-product-box {
+    background-color: #fcfaf8;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.add-product-box h3, .form-container h3 {
+    color: #6b1d2f;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #6b1d2f;
+    box-shadow: 0 0 5px rgba(107, 29, 47, 0.3);
+}
+
+/* لو الرقم غلط يبقى لونه أحمر */
+.form-group input:invalid:not(:placeholder-shown) {
+    border-color: #e74c3c;
+}
+
+.btn-add {
+    background-color: #f0f0f0;
+    color: #6b1d2f;
+    border: 2px dashed #6b1d2f;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-add:hover {
+    background-color: #6b1d2f;
+    color: #fff;
+    border-style: solid;
+}
+
+.divider {
+    margin: 30px 0;
+    border: none;
+    border-top: 1px dashed #ddd;
+}
+
+/* تنسيق السلة */
+.cart-display {
+    background-color: #fdf2f2;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+}
+
+.cart-display h4 {
+    color: #6b1d2f;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.cart-display ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-display li {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #eee;
+}
+
+.cart-display li span.remove-item {
+    color: #e74c3c;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.btn-confirm {
+    background-color: #27ae60;
+    margin-top: 15px;
+}
+
+.btn-confirm:hover {
+    background-color: #219150;
+}
+
+/* الفوتر */
+footer {
+    background-color: #6b1d2f;
+    color: #fff;
+    padding: 40px 0 20px;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 50%;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #fff;
+    color: #6b1d2f;
+    transform: translateY(-3px);
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* التجاوب مع الموبايل */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

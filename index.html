@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كومفلو | راحة تستحقها كل أم</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="container header-content">
+            <img src="images/logo.png" alt="Comfloo Logo" class="logo">
+            <a href="#order-section" class="btn btn-primary">اطلبي الآن</a>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>من حلم الطفولة.. لراحة الأمومة</h1>
+                <p>صُنع بقلب أم.. حلول عملية وأنيقة لراحتك وسلامة طفلك.</p>
+                <a href="#order-section" class="btn btn-large">اطلبي الآن</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-baby.jpg" alt="أم وطفل">
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المنتجات -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">منتجاتنا الأساسية</h2>
+            <div class="product-grid">
+                
+                <!-- منتج 1 -->
+                <div class="product-card">
+                    <img src="images/changing-mat.jpg" alt="مفارش غيار عملي">
+                    <h3>مفارش غيار عملي وأنيق</h3>
+                    <div class="price">150 ج.م</div>
+                    <p>وجه قطن ناعم ومبطّن اسفنج لراحة طفلك، ووجه وتر بروف مقاوم للماء يسهل عليكِ التنظيف.</p>
+                    <button class="btn order-btn" onclick="quickOrder('مفارش غيار عملي')">اطلبي الآن</button>
+                </div>
+
+                <!-- منتج 2 -->
+                <div class="product-card">
+                    <img src="images/nursing-cover.jpg" alt="ساتر الرضاعة">
+                    <h3>ساتر الرضاعة</h3>
+                    <div class="price">120 ج.م</div>
+                    <p>خصوصية مريحة لكِ، مع دعم ذكي عند الرقبة يسهل الرؤية والتنفس، ومقاس عملي يناسب الجميع.</p>
+                    <button class="btn order-btn" onclick="quickOrder('ساتر الرضاعة')">اطلبي الآن</button>
+                </div>
+
+                <!-- منتج 3: مخدة الرضاعة -->
+                <div class="product-card">
+                    <img src="images/nursing-pillow.jpg" alt="مخدة الرضاعة" id="main-pillow-img">
+                    <h3>مخدة الرضاعة</h3>
+                    <div class="price">200 ج.م</div>
+                    <p>تصاميم مدروسة لراحتك، بها ربط تثبيت أثناء الاستخدام، وغطاء قطن ناعم يبسّط الغسيل.</p>
+                    
+                    <div class="product-colors">
+                        <span>الألوان المتاحة:</span>
+                        <img src="images/nursing-pillow-raqa.jpg" data-src="images/nursing-pillow-raqa.jpg" data-name="رقة" alt="رقة" title="رقة">
+                        <img src="images/nursing-pillow-rawanq.jpg" data-src="images/nursing-pillow-rawanq.jpg" data-name="رونق" alt="رونق" title="رونق">
+                        <img src="images/nursing-pillow-abeq.jpg" data-src="images/nursing-pillow-abeq.jpg" data-name="عبق" alt="عبق" title="عبق">
+                        <img src="images/nursing-pillow-zaytoon.jpg" data-src="images/nursing-pillow-zaytoon.jpg" data-name="زيتون" alt="زيتون" title="زيتون">
+                    </div>
+                    
+                    <div class="selected-color">اللون المختار: <span id="selected-color-name">الأساسي</span></div>
+
+                    <button class="btn order-btn" onclick="quickOrder('مخدة الرضاعة', document.getElementById('selected-color-name').textContent)">اطلبي الآن</button>
+                </div>
+
+                <!-- منتج 4 -->
+                <div class="product-card">
+                    <img src="images/baby-nest.jpg" alt="بيبي نست">
+                    <h3>بيبي نست</h3>
+                    <div class="price">350 ج.م</div>
+                    <p>راحة في كل خطوة، تصميم يحمي طفلك من ضغط على ظهره، وإحساس بالبيت ليمنحه نوم عميق.</p>
+                    <button class="btn order-btn" onclick="quickOrder('بيبي نست')">اطلبي الآن</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المميزات -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">ليه تختاري كومفلو؟</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>صُنع بقلب أم</h3>
+                    <p>منتجات مخصصة بقلب أم لتوفر لك الهدوء والراحة، لأننا بنفهم احتياجاتك اليومية.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-baby"></i>
+                    <h3>خامات آمنة وراحة</h3>
+                    <p>نستخدم أجود أنواع القطن الناعم لضمان راحة وسلامة بشرة طفلك الحساسة.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-truck"></i>
+                    <h3>شحن سريع لكل مصر</h3>
+                    <p>نوصل منتجاتنا لجميع محافظات مصر بأسرع وقت عشان تستفيدي بيها فوراً.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التقييمات -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title">آراء أمهاتنا</h2>
+            <div class="reviews-grid">
+                <img src="images/review-1.jpg" alt="تقييم 1" class="review-img">
+                <img src="images/review-2.jpg" alt="تقييم 2" class="review-img">
+                <img src="images/review-3.jpg" alt="تقييم 3" class="review-img">
+                <img src="images/review-4.jpg" alt="تقييم 4" class="review-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الطلب الذكي -->
+    <section class="order-section" id="order-section">
+        <div class="container">
+            <h2 class="section-title">أكملي طلبك بسهولة</h2>
+            <div class="form-container">
+                
+                <!-- 1. قسم إضافة المنتجات للسلة -->
+                <div class="add-product-box">
+                    <h3><i class="fas fa-shopping-basket"></i> أضيفي منتجات لطلبك</h3>
+                    <div class="form-group">
+                        <label for="productSelect">اختر المنتج <span style="color:red">*</span></label>
+                        <select id="productSelect" required>
+                            <option value="مفارش غيار عملي - 150 ج.م">مفارش غيار عملي - 150 ج.م</option>
+                            <option value="ساتر الرضاعة - 120 ج.م">ساتر الرضاعة - 120 ج.م</option>
+                            <option value="مخدة الرضاعة - 200 ج.م">مخدة الرضاعة - 200 ج.م</option>
+                            <option value="بيبي نست - 350 ج.م">بيبي نست - 350 ج.م</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="productColor">اللون <span style="color:red">*</span></label>
+                            <input type="text" id="productColor" placeholder="مثال: رقة" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="productSize">المقاس <span style="color:red">*</span></label>
+                            <input type="text" id="productSize" placeholder="مثال: 70x60" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="productQty">الكمية <span style="color:red">*</span></label>
+                            <input type="number" id="productQty" value="1" min="1" required>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="btn btn-add" onclick="addToCart()">+ إضافة المنتج للطلب</button>
+                </div>
+
+                <!-- 2. عرض السلة -->
+                <div id="cartDisplay" class="cart-display" style="display:none;">
+                    <h4>🛒 المنتجات في طلبك:</h4>
+                    <ul id="cartList"></ul>
+                </div>
+
+                <hr class="divider">
+
+                <!-- 3. بيانات الشحن والإرسال -->
+                <h3><i class="fas fa-truck"></i> بيانات الشحن</h3>
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="customerName">الاسم بالكامل <span style="color:red">*</span></label>
+                        <input type="text" id="customerName" placeholder="مثال: سارة أحمد" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customerPhone1">رقم الموبايل الأساسي <span style="color:red">*</span></label>
+                            <input type="tel" id="customerPhone1" placeholder="مثال: 01012345678 أو +201012345678" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone2">رقم موبايل إضافي (اختياري)</label>
+                            <input type="tel" id="customerPhone2" placeholder="مثال: 01012345678 أو +201012345678">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerAddress">العنوان بالتفصيل <span style="color:red">*</span></label>
+                        <input type="text" id="customerAddress" placeholder="المحافظة، المدينة، الشارع، رقم العمارة" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="orderNotes">ملاحظات إضافية</label>
+                        <textarea id="orderNotes" rows="2" placeholder="أي تفاصيل أخرى تودين إضافتها..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-large btn-confirm">تأكيد الطلب النهائي</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.facebook.com/comfloo.eg" target="_blank" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/comfloo.eg" target="_blank" title="إنستجرام"><i class="fab fa-instagram"></i></a>
+                <a href="https://m.me/Comfloo.eg" target="_blank" title="ماسنجر"><i class="fab fa-facebook-messenger"></i></a>
+            </div>
+            <p>جميع الحقوق محفوظة &copy; كومفلو 2024</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
